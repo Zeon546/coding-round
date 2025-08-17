@@ -223,7 +223,7 @@ POST   /api/v1/users/favorites        # Add to favorites
 DELETE /api/v1/users/favorites/:id    # Remove from favorites
 ```
 
-## 📱 Screen Flow
+## Screen Flow
 
 ```
 App Launch
