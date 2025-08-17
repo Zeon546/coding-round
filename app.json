@@ -1,0 +1,14 @@
+{
+  "name": "EventExplorer",
+  "displayName": "Event Explorer",
+  "orientation": "portrait",
+  "primaryColor": "#6366F1",
+  "icon": "./assets/icon.png",
+  "splash": {
+    "image": "./assets/splash.png",
+    "backgroundColor": "#6366F1"
+  },
+  "platforms": ["ios", "android"],
+  "version": "1.0.0",
+  "description": "Discover and book amazing events near you"
+}
