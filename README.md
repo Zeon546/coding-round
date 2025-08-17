@@ -9,42 +9,42 @@
 ![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 
-## 🌟 Key Features
+## Key Features
 
-### 📍 Event Discovery
+### Event Discovery
 - **Browse Events**: View events in a beautiful card-based layout
 - **Featured Events**: Highlighted premium events with carousel display
 - **Category Filtering**: Filter by Music, Sports, Technology, Arts & Culture, etc.
 - **Search Functionality**: Search events by name, description, or keywords
 - **Location-based Discovery**: Find events near your location
 
-### 🎫 Event Details & Booking
+### Event Details & Booking
 - **Comprehensive Event Info**: Detailed event pages with descriptions, venue info, and organizer details
 - **Interactive Maps**: View event locations with integrated maps
 - **Ticket Booking**: Complete booking flow with multiple ticket types
 - **QR Code Tickets**: Generate QR codes for event entry
 - **Payment Integration**: Multiple payment methods (Credit Card, PayPal, Apple Pay, Google Pay)
 
-### 👤 User Profile & Preferences
+### User Profile & Preferences
 - **User Profiles**: Customizable user profiles with profile picture upload
 - **Event History**: Track attended and upcoming events
 - **Favorites System**: Save and organize favorite events
 - **Preferences**: Customize notifications, location services, and app settings
 
-### 🗺️ Location & Navigation
+### Location & Navigation
 - **Map View**: View all events on an interactive map
 - **Geolocation**: Find events near your current location
 - **Venue Information**: Detailed venue addresses and directions
 
-### 🔔 Smart Features
+### Smart Features
 - **Push Notifications**: Get notified about new events and booking confirmations
 - **Calendar Integration**: Add events to device calendar
 - **Social Sharing**: Share events with friends via various platforms
 - **Offline Support**: AsyncStorage for offline data persistence
 
-## 🏗️ Technical Architecture
+## Technical Architecture
 
-### 📦 Core Dependencies
+### Core Dependencies
 - **React Native**: 0.72.6 - Cross-platform mobile development
 - **React Navigation**: 6.x - Screen navigation and routing
 - **React Native Vector Icons**: Material Design icons
@@ -54,19 +54,19 @@
 - **React Native QRCode SVG**: QR code generation
 - **Axios**: HTTP client for API requests
 
-### 🎨 UI/UX Design Patterns
+### UI/UX Design Patterns
 - **Material Design**: Following Google's Material Design principles
 - **Card-based Layout**: Modern card interface for event display
 - **Bottom Tab Navigation**: Intuitive navigation system
 - **Modal Presentations**: Overlay screens for detailed views
 - **Responsive Design**: Optimized for various screen sizes
 
-### 🔧 State Management
+### State Management
 - **Component State**: Local state management with React hooks
 - **AsyncStorage**: Persistent storage for user preferences and favorites
 - **Service Layer**: Centralized API service with EventService class
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 EventExplorerApp/
@@ -93,7 +93,7 @@ EventExplorerApp/
 └── README.md                       # Project documentation
 ```
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 - **Node.js**: 18.x or higher
@@ -162,21 +162,21 @@ EventExplorerApp/
    - Add `google-services.json` (Android) and `GoogleService-Info.plist` (iOS)
    - Configure Firebase Cloud Messaging
 
-## 🎯 Usage Guide
+## Usage Guide
 
-### 🏠 Home Screen
+### Home Screen
 - **Discover Events**: Scroll through featured events carousel
 - **Browse Categories**: Tap category chips to filter events
 - **Search**: Use search bar for specific events
 - **Event Cards**: Tap any event card to view details
 
-### 🔍 Event Details
+### Event Details
 - **View Information**: Complete event details including date, venue, price
 - **Interactive Map**: See event location with directions
 - **Share Event**: Share with friends via social platforms
 - **Book Tickets**: Tap "Book Tickets" to start booking process
 
-### 🎫 Booking Flow
+### Booking Flow
 1. **Select Ticket Type**: Choose between General Admission or VIP
 2. **Choose Quantity**: Select number of tickets (1-10)
 3. **Enter Information**: Provide contact details
@@ -184,12 +184,12 @@ EventExplorerApp/
 5. **Confirm Booking**: Review and confirm purchase
 6. **Get QR Code**: Receive digital ticket with QR code
 
-### 👤 Profile Management
+### Profile Management
 - **View Stats**: See events attended, upcoming, and favorites
 - **Manage Preferences**: Toggle notifications and location services
 - **Account Settings**: Update profile information and payment methods
 
-## 🔌 API Integration
+## API Integration
 
 ### EventService Class
 The `EventService` class handles all data operations:
@@ -251,7 +251,7 @@ App Launch
     └─── Profile
 ```
 
-## 🎨 Design System
+## Design System
 
 ### Color Palette
 - **Primary**: `#6366F1` (Indigo)
@@ -274,7 +274,7 @@ App Launch
 - **Icons**: Material Design icon set
 - **Spacing**: 4px, 8px, 12px, 16px, 24px, 32px grid
 
-## 🧪 Testing
+## Testing
 
 ### Unit Testing
 ```bash
@@ -291,7 +291,7 @@ detox build --configuration ios.sim.debug
 detox test --configuration ios.sim.debug
 ```
 
-## 📈 Performance Optimizations
+## Performance Optimizations
 
 ### Implemented Optimizations
 - **Image Lazy Loading**: Efficient image loading for event cards
@@ -306,7 +306,7 @@ detox test --configuration ios.sim.debug
 - **Memory Usage**: Optimized for devices with 2GB+ RAM
 - **Bundle Size**: < 25MB for production build
 
-## 🔒 Security Features
+## Security Features
 
 ### Data Security
 - **Input Validation**: All user inputs are validated and sanitized
@@ -320,7 +320,7 @@ detox test --configuration ios.sim.debug
 - **User Consent**: Clear consent for data usage
 - **Local Storage**: Most data stored locally on device
 
-## 🚀 Deployment
+## Deployment
 
 ### Production Build
 ```bash
@@ -335,7 +335,7 @@ cd android && ./gradlew assembleRelease
 1. **iOS App Store**: Upload via Xcode or App Store Connect
 2. **Google Play Store**: Upload APK/AAB via Google Play Console
 
-## 🛠️ Development Tools
+## Development Tools
 
 ### Recommended Extensions (VS Code)
 - **React Native Tools**: Microsoft
@@ -349,11 +349,11 @@ cd android && ./gradlew assembleRelease
 - **React Native Debugger**: Standalone debugging tool
 - **Chrome DevTools**: Network and performance debugging
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the project
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -361,7 +361,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **React Native Community**: For the amazing framework and ecosystem
 - **Material Design**: For the design system and icons
