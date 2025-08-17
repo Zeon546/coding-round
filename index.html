@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <h1 class="header__title">Event Explorer</h1>
+                <div class="header__search">
+                    <input type="text" id="searchInput" class="form-control search-input" placeholder="Search events...">
+                </div>
+                <button class="btn btn--outline filter-toggle" id="filterToggle">
+                    <span>Filters</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="app-layout">
+                <!-- Filter Sidebar -->
+                <aside class="filter-sidebar" id="filterSidebar">
+                    <div class="filter-sidebar__header">
+                        <h3>Filters</h3>
+                        <button class="btn btn--sm btn--secondary" id="clearFilters">Clear All</button>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="form-label">Categories</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="Music" class="category-filter">
+                                <span>Music</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="Sports" class="category-filter">
+                                <span>Sports</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="Arts & Culture" class="category-filter">
+                                <span>Arts & Culture</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="Technology" class="category-filter">
+                                <span>Technology</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="Food & Drink" class="category-filter">
+                                <span>Food & Drink</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="Networking" class="category-filter">
+                                <span>Networking</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="Family" class="category-filter">
+                                <span>Family</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="Health & Wellness" class="category-filter">
+                                <span>Health & Wellness</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="form-label" for="cityFilter">City</label>
+                        <select id="cityFilter" class="form-control">
+                            <option value="">All Cities</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="form-label">Date Range</label>
+                        <div class="date-range">
+                            <input type="date" id="startDate" class="form-control">
+                            <span>to</span>
+                            <input type="date" id="endDate" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="form-label">Price Range</label>
+                        <div class="price-range">
+                            <input type="range" id="minPrice" class="price-slider" min="0" max="500" value="0">
+                            <input type="range" id="maxPrice" class="price-slider" min="0" max="500" value="500">
+                            <div class="price-display">
+                                <span id="priceRangeDisplay">$0 - $500</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="form-label">Minimum Rating</label>
+                        <div class="rating-filter">
+                            <div class="star-rating" id="ratingFilter">
+                                <span class="star" data-rating="1">★</span>
+                                <span class="star" data-rating="2">★</span>
+                                <span class="star" data-rating="3">★</span>
+                                <span class="star" data-rating="4">★</span>
+                                <span class="star" data-rating="5">★</span>
+                            </div>
+                            <span id="ratingDisplay">Any Rating</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="form-label">Event Type</label>
+                        <div class="radio-group">
+                            <label class="radio-item">
+                                <input type="radio" name="eventType" value="all" class="event-type-filter" checked>
+                                <span>All Events</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="eventType" value="in-person" class="event-type-filter">
+                                <span>In-Person</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="eventType" value="online" class="event-type-filter">
+                                <span>Online</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="form-label" for="sortBy">Sort By</label>
+                        <select id="sortBy" class="form-control">
+                            <option value="date">Date</option>
+                            <option value="name">Name</option>
+                            <option value="price">Price</option>
+                            <option value="rating">Rating</option>
+                        </select>
+                    </div>
+                </aside>
+
+                <!-- Events Content -->
+                <div class="events-content">
+                    <!-- Results Info -->
+                    <div class="results-info">
+                        <p id="eventsCount">Loading events...</p>
+                    </div>
+
+                    <!-- Featured Events -->
+                    <section class="featured-events" id="featuredEvents">
+                        <h2>Featured Events</h2>
+                        <div class="featured-carousel" id="featuredCarousel">
+                            <!-- Featured events will be inserted here -->
+                        </div>
+                    </section>
+
+                    <!-- All Events -->
+                    <section class="all-events">
+                        <h2>All Events</h2>
+                        <div class="events-grid" id="eventsGrid">
+                            <!-- Event cards will be inserted here -->
+                        </div>
+                    </section>
+
+                    <!-- No Results Message -->
+                    <div class="no-results hidden" id="noResults">
+                        <h3>No events found</h3>
+                        <p>Try adjusting your search criteria or filters.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Event Detail Modal -->
+    <div class="modal hidden" id="eventModal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="modalClose">&times;</button>
+            <div class="event-detail" id="eventDetail">
+                <!-- Event details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner hidden" id="loadingSpinner">
+        <div class="spinner"></div>
+        <p>Loading events...</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
