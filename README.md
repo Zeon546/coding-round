@@ -361,13 +361,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📞 Support
-
-For support and questions:
-- **Email**: support@eventexplorer.app
-- **Issues**: GitHub Issues page
-- **Documentation**: See inline code comments
-
 ## 🙏 Acknowledgments
 
 - **React Native Community**: For the amazing framework and ecosystem
