@@ -106,7 +106,7 @@ EventExplorerApp/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/event-explorer-app.git
+   git clone https://github.com/Zeon546/coding-round.git
    cd event-explorer-app
    ```
 
